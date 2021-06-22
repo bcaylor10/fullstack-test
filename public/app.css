@@ -10729,3 +10729,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+h1, .h1, h2, .h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}

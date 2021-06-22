@@ -1,0 +1,67 @@
+<?php if ($success) : ?>
+    <div class="alert alert-success">
+        Submission successful!
+    </div>
+<?php endif; ?>
+
+<form action="/" method="POST">
+    <div class="form-group mb-3">
+        <label class='form-label' for="name">Name*</label>
+        <input 
+            value="<?= isset($_POST['name']) ? $_POST['name'] : '' ?>"
+            type="text" 
+            class="form-control <?= in_array('name', $errors) ? 'border-danger' : ''; ?>" 
+            name="name" 
+            id='name' 
+            required
+        >
+        <?php if (in_array('name', $errors)) : ?>
+            <p class='text-danger'>Name is required</p>
+        <?php endif; ?>
+    </div> <!-- form-group mb-3 -->
+
+    <div class="form-group mb-3">
+        <label class='form-label' for="email">Email*</label>
+        <input 
+            value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>"
+            type="email" 
+            class="form-control <?= in_array('email', $errors) ? 'border-danger' : ''; ?>" 
+            name="email" 
+            id='email'
+            required 
+        >
+        <?php if (in_array('email', $errors)) : ?>
+            <p class='text-danger'>Email is required</p>
+        <?php endif; ?>
+    </div> <!-- form-group mb-3 -->
+    
+    <div class="form-group mb-3">
+        <label class='form-label' for="phone">Phone Number*</label>
+        <input 
+            value="<?= isset($_POST['phone']) ? $_POST['phone'] : '' ?>"
+            type="tel" 
+            class="form-control <?= in_array('phone', $errors) ? 'border-danger' : ''; ?>" 
+            name="phone"
+            id='phone'
+        >
+        <?php if (in_array('phone', $errors)) : ?>
+            <p class='text-danger'>Phone is required</p>
+        <?php endif; ?>
+    </div> <!-- form-group mb-3 -->
+
+    <div class="form-group mb-3">
+        <label class='form-label' for="industry">Industry*</label>
+        <input 
+            value="<?= isset($_POST['industry']) ? $_POST['industry'] : '' ?>"
+            type="text" 
+            class="form-control <?= in_array('industry', $errors) ? 'border-danger' : ''; ?>" 
+            name="industry" 
+            id='industry'
+        >
+        <?php if (in_array('industry', $errors)) : ?>
+            <p class='text-danger'>Industry is required</p>
+        <?php endif; ?>
+    </div> <!-- form-group mb-3 -->
+
+    <button type="submit" class='btn btn-primary'>Submit</button>
+</form>
