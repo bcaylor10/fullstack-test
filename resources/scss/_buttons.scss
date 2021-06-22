@@ -1,0 +1,18 @@
+.btn {
+    border-radius: 50px;
+    background: $blue;
+    font-family: $montserrat;
+    font-weight: $bold;
+    letter-spacing: 2px;
+    font-size: 1.125rem;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    &.d-block {
+        width: 100%;
+    }
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}

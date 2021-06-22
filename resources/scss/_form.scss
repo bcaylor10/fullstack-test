@@ -1,0 +1,24 @@
+form {
+    label,
+    label.form-label {
+        display: inline-block;
+        font-weight: $bold;
+        text-transform: uppercase;
+        font-size: .875rem;
+        letter-spacing: 2px;
+        font-family: $montserrat;
+    }
+    input:not([type="radio"]),
+    input:not([type="checkbox"]),
+    input:not([type="submit"]),
+    input:not([type="reset"]) {
+        border: 1px solid $light-grey;
+        border-radius: 0;
+        padding: 15px 10px;
+        margin-bottom: 20px;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}

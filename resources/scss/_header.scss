@@ -1,0 +1,20 @@
+header {
+    width: 100%;
+    padding: 50px 0;
+    a.logo {
+        text-decoration: none;
+        color: $black;
+        .tagline {
+            display: inline-block;
+            margin-left: 25px;
+            font-weight: $bold;
+            text-transform: uppercase;
+            font-size: .75rem;
+            letter-spacing: 1px;
+            font-family: $montserrat;
+            @media (max-width: 991px) {
+                margin: 0;
+            }
+        }
+    }
+}

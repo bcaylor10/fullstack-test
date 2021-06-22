@@ -22,8 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -33,15 +31,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geofencing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/app.css">
 </head>
 <body>
-    <div class="container">
+    <?php require_once __DIR__ . '/components/header.php'; ?>
 
-        <?php require_once __DIR__ . '/components/form.php'; ?>
+    <main role='main'>
+        <?php require_once __DIR__ . '/components/content-form-section.php'; ?>
+    </main>
 
-    </div> <!-- container -->
+    <?php require_once __DIR__ . '/components/footer.php'; ?>
 
     <script src="public/app.js"></script>
 </body>
